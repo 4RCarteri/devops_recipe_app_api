@@ -13,11 +13,11 @@ variable "contact" {
   default     = "carterijj@gmail.com"
 }
 
-variable "dbusername" {
+variable "db_username" {
   description = "Username for the recipe app api database"
   default     = "recipeapp"
 }
 
-variable "dbpassword" {
+variable "db_password" {
   description = "Password for the Terraform database"
 }
