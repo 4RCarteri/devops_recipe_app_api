@@ -1,6 +1,6 @@
-##
-# Database
-##
+############
+# Database #
+############
 
 resource "aws_db_subnet_group" "main" {
   name = "${local.prefix}-main"
@@ -15,18 +15,18 @@ resource "aws_db_subnet_group" "main" {
 }
 
 resource "aws_security_group" "rds" {
+  description = "Allow access to the RDS database instance."
   name        = "${local.prefix}-rds-inbound-access"
-  description = "Allow traffic to the RDS instance"
   vpc_id      = aws_vpc.main.id
 
   ingress {
+    protocol  = "tcp"
     from_port = 5432
     to_port   = 5432
-    protocol  = "tcp"
   }
 
   tags = {
-    Name = "${local.prefix}-rds-security-group"
+    Name = "${local.prefix}-db-security-group"
   }
 }
 
@@ -36,9 +36,9 @@ resource "aws_db_instance" "main" {
   allocated_storage          = 20
   storage_type               = "gp2"
   engine                     = "postgres"
-  engine_version             = "15.3"
+  engine_version             = "16.3"
   auto_minor_version_upgrade = true
-  instance_class             = "db.t4g.micro"
+  instance_class             = "db.t3.micro"
   username                   = var.db_username
   password                   = var.db_password
   skip_final_snapshot        = true
