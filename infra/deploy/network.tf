@@ -1,6 +1,6 @@
-##
-# Network infraestructure
-##
+##########################
+# Network infrastructure #
+##########################
 
 resource "aws_vpc" "main" {
   cidr_block           = "10.1.0.0/16"
@@ -8,10 +8,9 @@ resource "aws_vpc" "main" {
   enable_dns_support   = true
 }
 
-##
-# Internet gateway needed for inbound access to the ALB
-##
-
+#########################################################
+# Internet Gateway needed for inbound access to the ALB #
+#########################################################
 resource "aws_internet_gateway" "main" {
   vpc_id = aws_vpc.main.id
 
@@ -20,10 +19,9 @@ resource "aws_internet_gateway" "main" {
   }
 }
 
-##
-# Public subnets for load balancer public access
-##
-
+##################################################
+# Public subnets for load balancer public access #
+##################################################
 resource "aws_subnet" "public_a" {
   vpc_id                  = aws_vpc.main.id
   cidr_block              = "10.1.1.0/24"
@@ -58,7 +56,7 @@ resource "aws_subnet" "public_b" {
   vpc_id                  = aws_vpc.main.id
   cidr_block              = "10.1.2.0/24"
   map_public_ip_on_launch = true
-  availability_zone       = "${data.aws_region.current.name}a"
+  availability_zone       = "${data.aws_region.current.name}b"
 
   tags = {
     Name = "${local.prefix}-public-b"
@@ -84,10 +82,9 @@ resource "aws_route" "public_internet_access_b" {
   gateway_id             = aws_internet_gateway.main.id
 }
 
-##
-# Private subnets for internal access only
-##
-
+############################################
+# Private Subnets for internal access only #
+############################################
 resource "aws_subnet" "private_a" {
   vpc_id            = aws_vpc.main.id
   cidr_block        = "10.1.10.0/24"
