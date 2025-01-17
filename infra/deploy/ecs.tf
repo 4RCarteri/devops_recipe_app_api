@@ -197,7 +197,7 @@ resource "aws_ecs_service" "api" {
   network_configuration {
     subnets = [
       aws_subnet.private_a.id,
-      aws_subnet.pprivate_b.id
+      aws_subnet.private_b.id
     ]
 
     security_groups = [aws_security_group.ecs_service.id]
