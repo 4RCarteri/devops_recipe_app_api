@@ -1,25 +1,58 @@
-<div align="center">
-    <a href="https://londonappdeveloper.com" target="_blank">
-        <img src="https://londonappdeveloper.com/wp-content/uploads/2024/11/banner.svg" alt="Banner image" />
-    </a>
-</div>
-
-<div align="center">
-    <p>Full-Stack Consulting and Courses.</p>
-    <a href="https://londonappdeveloper.com" target="_blank">Website</a> |
-    <a href="https://londonappdeveloper.teachable.com/" target="_blank">Courses</a> |
-    <a href="https://londonappdeveloper.com/tutorials/" target="_blank">Tutorials</a> |
-    <a href="https://londonappdeveloper.com/consulting/" target="_blank">Consulting
-</div>
-
-<br /><br >
-
 # DevOps Deployment Automation with Terraform, AWS and Docker - Starter Code
 
-This project contains the starter code for our course: [DevOps Deployment Automation with Terraform, AWS and Docker](https://londonapp.dev/c3).
+This project contains the starter code for our course: [DevOps Deployment Automation with Terraform, AWS and Docker](https://londonapp.dev/c3) [Udemy version](https://www.udemy.com/course/devops-deployment-automation-terraform-aws-docker/).
 
 It contains the code you should have by the end of our [Build a Backend REST API with Python & Django REST Framework - Advanced](https://londonapp.dev/c2) course. We've created this snapshot, in-case we update the aforementioned course in the future.
 
+# Topics Covered
+
+This document provides an overview of the key topics and components required for setting up and deploying an infrastructure using AWS and Terraform.
+
+### AWS Account Setup
+- Guidance on creating and managing AWS accounts for project deployment.
+
+### Preparing a Project for Deployment
+- Steps to prepare and configure your project for deployment.
+
+### Configured Terraform
+- Configuration and setup of Terraform for infrastructure as code (IaC).
+
+### Setup / Deploy Terraform
+- Details about managing IAM permissions.
+- Instructions for deploying the necessary infrastructure.
+
+---
+
+### Additional Topics
+
+#### GitHub Actions and GitLab CI/CD
+- Utilizing GitHub Actions and GitLab pipelines for CI/CD automation.
+
+#### Network Configuration
+- Configuration of VPC, subnets, security groups, and other networking aspects.
+
+#### Database
+- Configuring and managing databases in the AWS ecosystem.
+
+#### ECS
+- Deployment and scaling of applications using Elastic Container Service (ECS).
+
+#### Load Balancer
+- Setting up AWS Load Balancers for managing traffic.
+
+#### EFS
+- Integrating Elastic File System for shared storage across resources.
+
+#### Custom DNS
+- Configuring custom domain names and DNS settings for the project.
+
+You will build an architecture that is scalable, secure, resilient and facilitates zero downtime deployments.
+
+The type of architecture that's capable of handling millions of users, and looks like this...
+![alt text](image.png)
+
+You will set up a professional development workflow like this…
+![alt text](image-1.png)
 ## Local Development
 
 ### Running Project
