@@ -85,6 +85,8 @@ resource "aws_ecs_task_definition" "api" {
           {
             name  = "ALLOWED_HOSTS"
             value = "*"
+            # uncomment the line below to use the Route 53 record
+            # value = aws_route53_record.app.fqdn
           }
         ]
         mountPoints = [
