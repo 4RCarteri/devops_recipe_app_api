@@ -21,8 +21,6 @@ This document provides an overview of the key topics and components required for
 - Details about managing IAM permissions.
 - Instructions for deploying the necessary infrastructure.
 
----
-
 ### Additional Topics
 
 #### GitHub Actions and GitLab CI/CD
