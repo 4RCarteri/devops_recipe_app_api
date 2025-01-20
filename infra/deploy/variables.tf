@@ -37,7 +37,7 @@ variable "django_secret_key" {
 variable "dns_zone_name" {
   description = "Name of the DNS zone"
   # Create an AWS Route 53 public hosted zone and enter the name here
-  # default = "awsrecipe.com"
+  default = "awsrecipe.com"
 }
 
 variable "subdomain" {
