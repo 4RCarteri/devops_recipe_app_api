@@ -33,3 +33,20 @@ variable "ecr_app_image" {
 variable "django_secret_key" {
   description = "Django secret key"
 }
+
+variable "dns_zone_name" {
+  description = "Name of the DNS zone"
+  # Create an AWS Route 53 public hosted zone and enter the name here
+  # default = "awsrecipe.com"
+}
+
+variable "subdomain" {
+  description = "Subdomain for each environment"
+  type        = map(string)
+
+  default = { prod = "api"
+    staging = "api.staging"
+    dev     = "api.dev"
+  }
+
+}
